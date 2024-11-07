@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> TgTestC </title>
+
+</head>
+<body>
+    <script>
+        var getUrlString = location.href;
+        var url = new URL(getUrlString);
+        alert(JSON.stringify({
+            id: url.searchParams.get('id'),
+            first_name: url.searchParams.get('first_name'),
+            last_name: url.searchParams.get('last_name'),
+            username: url.searchParams.get('username'),
+            photo_url: url.searchParams.get('photo_url'),
+            auth_date: url.searchParams.get('auth_date'),
+            hash: url.searchParams.get('hash'),
+        }))
+        //忽略驗簽部分
+    </script>
+</body>
+</html>
