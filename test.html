@@ -5,13 +5,13 @@
 
 </head>
 <body>
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="PlatfromTestTg_Bot" data-size="large" data-auth-url="https://sh-tasi.github.io/test666.github.io/callback.html" data-request-access="write"></script>
-    <script type="text/javascript">
-      function onTelegramAuth(user) {
-          console.log(user);
-        alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', ' + user.username : '') + ')');
-      }
-    </script>
-        <a href="https://oauth.telegram.org/auth?bot_id=7914226006&origin=https%3A%2F%2Fsh-tasi.github.io&embed=1&request_access=write&return_to=https%3A%2F%2Fsh-tasi.github.io%2Ftest666.github.io%2Ftest.html" target="_blank">登入</a>
+<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="PlatfromTestTg_Bot" data-size="small" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+<script type="text/javascript">
+  function onTelegramAuth(user) {
+    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+    window.parent.postMessage("這是來自 iframe 的信息", "https://sh-tasi.github.io");
+  }
+</script>
+
 </body>
 </html>
