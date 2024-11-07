@@ -20,5 +20,16 @@
         }))
         //忽略驗簽部分
     </script>
+    <script>
+      // 監聽從 iframe 發來的消息
+      window.addEventListener("message", function(event) {
+        // 這裡可以檢查來自指定來源的消息
+        if (event.origin === "https://sh-tasi.github.io") {
+          // 解析來自 iframe 的數據
+          console.log("收到來自 iframe 的消息:", event.data);
+          // 根據消息做出回應或行動
+        }
+  });
+</script>
 </body>
 </html>
