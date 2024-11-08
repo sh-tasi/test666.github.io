@@ -9,7 +9,8 @@
 <script type="text/javascript">
   function onTelegramAuth(user) {
     alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-    window.parent.postMessage("這是來自 iframe 的信息", "https://sh-tasi.github.io");
+    let getUrlString = location.href;
+    window.parent.postMessage(user, getUrlString);
   }
 </script>
 
