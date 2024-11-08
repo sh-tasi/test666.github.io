@@ -22,8 +22,21 @@
         script.setAttribute('data-auth-url', authUrl);
         script.setAttribute('data-request-access', 'write');
 
+        // 監聽 script 加載完成事件
+        script.onload = function() {
+            console.log("Telegram widget script loaded.");
+        
+            // 在 Telegram 小工具加載完畢後，查找 #widget_login 並觸發行動
+            const button = document.querySelector('#widget_login button');
+            if (button) {
+                button.click();  // 觸發按鈕點擊事件
+            } else {
+                console.log('Button not found');
+            }
         // 將 script 添加到頁面
         document.body.appendChild(script);
+        
+};
     }
     else {
         // 創建新的 script 元素
