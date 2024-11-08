@@ -40,10 +40,6 @@
         // 將 script 添加到頁面
         document.body.appendChild(script);
     }
-    const button = document.querySelector('#widget_login button'); 
-    if (button) {
-        button.click();
-    }
 </script>
 <script type="text/javascript">
   function onTelegramAuth(user) {
@@ -51,6 +47,11 @@
     let getUrlString = location.href;
     window.parent.postMessage(user, getUrlString);
   }
+    const button = document.querySelector('#widget_login button'); 
+    console.log(button);
+    if (button) {
+        button.click();
+    }
 </script>
 
 </body>
