@@ -40,7 +40,10 @@
         // 將 script 添加到頁面
         document.body.appendChild(script);
     }
-    TWidgetLogin.auth();
+    const button = document.querySelector('#widget_login button'); 
+    if (button) {
+        button.click();
+    }
 </script>
 <script type="text/javascript">
   function onTelegramAuth(user) {
