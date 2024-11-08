@@ -9,7 +9,7 @@
     // 解析 query string
     const urlParams = new URLSearchParams(window.location.search);
     const authUrl = urlParams.get('authUrl'); // 假設 query string 為 ?authUrl=https://new-url.com
-
+    console.log(authUrl);
     if (authUrl) {
         // 創建新的 script 元素
         const script = document.createElement('script');
