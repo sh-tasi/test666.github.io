@@ -23,6 +23,7 @@
     <script>
           // 監聽從 iframe 發來的消息
           window.addEventListener("message", function(event) {
+              console.log(event);
             // 這裡可以檢查來自指定來源的消息
             if (event.origin === "https://sh-tasi.github.io") {
               // 解析來自 iframe 的數據
