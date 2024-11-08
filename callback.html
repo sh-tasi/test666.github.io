@@ -21,6 +21,9 @@
         //忽略驗簽部分
     </script>
     <script>
+            const referrer = document.referrer;
+            console.log(referrer);
+            
           // 監聽從 iframe 發來的消息
           window.addEventListener("message", function(event) {
               console.log(event);
