@@ -56,7 +56,7 @@
 </script>
 <script type="text/javascript">
   function onTelegramAuth(user) {
-    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ',' + user.username : '') + ')');
     let getUrlString = location.href;
     window.parent.postMessage(user, getUrlString);
   }
